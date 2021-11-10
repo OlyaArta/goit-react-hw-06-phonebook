@@ -65,11 +65,10 @@ function App() {
   return (
     <Container>
       <h1>Phonebook</h1>
-      <Form onSubmit={addContact} />
-
+      <Form />
       <h2>Contacts</h2>
-      <Filter value={filter} onChange={watchFilter} />
-      <ContactList contacts={results} onDeleteContact={deleteContact} />
+      <Filter />
+      <ContactList />
     </Container>
   );
 }

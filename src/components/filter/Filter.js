@@ -1,7 +1,13 @@
 import PropTypes from "prop-types";
 import s from "./Filter.module.css";
+import { getFilter } from "../../redux/phonebook-selectors";
+import { useSelector, useDispatch } from "react-redux";
+import * as actions from "../../redux/phonebook-actions";
 
-function Filter({ value, onChange }) {
+function Filter() {
+  const value = useSelector(getFilter);
+  const dispatch = useDispatch();
+  const onChange = (e) => dispatch(actions.changeFilter(e.currentTarget.value));
   return (
     <label className={s.label}>
       Find contacts by name
