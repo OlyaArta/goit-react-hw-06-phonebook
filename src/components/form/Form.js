@@ -36,7 +36,7 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const isContactsIncludes = contacts.find(
-      (contact) => contact.name === name
+      (contact) => contact.name.name === name
     );
 
     if (isContactsIncludes) {
