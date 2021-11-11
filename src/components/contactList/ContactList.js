@@ -13,15 +13,17 @@ export default function ContactList() {
 
   return (
     <ul className={s.list}>
-      {contacts.map(({ id, name, number }) => (
-        <ContactItem
-          name={name}
-          number={number}
-          onDeleteContact={deleteContact}
-          key={id}
-          id={id}
-        />
-      ))}
+      {contacts.map(({ id, name }) => {
+        return (
+          <ContactItem
+            name={name.name}
+            number={name.number}
+            onDeleteContact={deleteContact}
+            key={id}
+            id={id}
+          />
+        );
+      })}
     </ul>
   );
 }
