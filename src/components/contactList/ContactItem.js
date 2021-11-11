@@ -1,5 +1,5 @@
 // import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import s from "./Contact.module.css";
 
 const ContactItem = ({ name, number, id, onDeleteContact }) => {
@@ -18,11 +18,11 @@ const ContactItem = ({ name, number, id, onDeleteContact }) => {
   );
 };
 
-ContactItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-  onDeleteContact: PropTypes.func.isRequired,
-};
+// ContactItem.propTypes = {
+//   name: PropTypes.string.isRequired,
+//   id: PropTypes.string.isRequired,
+//   number: PropTypes.string.isRequired,
+//   onDeleteContact: PropTypes.func.isRequired,
+// };
 
 export default ContactItem;
